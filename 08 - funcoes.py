@@ -1,14 +1,12 @@
+import random
 # Exercício 1
-"""
-def par_ou_impar(num):
-    if num % 2 != 0:
+def par_ou_impar(n):
+    if n % 2 != 0:
         return "Impar"
     
     else:
-        return "Par"
-"""    
+        return "Par"  
 # Exercício 2
-"""
 def tabuada(n: int) -> str:
     i = 1
 
@@ -19,9 +17,7 @@ def tabuada(n: int) -> str:
         print(f'{n} X {i} = {n*i}')
 
         i += 1
-"""
 # Exercício 3
-"""
 def soma_n(n: int):
     soma = 0
 
@@ -33,9 +29,7 @@ def soma_n(n: int):
         i += 1
 
     return soma
-"""
 # Exercício 4
-"""
 def fatorial(n):
     fatorial = 1
 
@@ -43,9 +37,7 @@ def fatorial(n):
         fatorial *= i
 
     return fatorial
-"""
 # Exercício 5
-"""
 def eh_primo(n):
     
     for i in range(1, n, 1):
@@ -53,9 +45,7 @@ def eh_primo(n):
             return False
 
     return True
-"""
 # Exercício 6
-"""
 def maior_digito(n):
     n = str(n)
 
@@ -66,18 +56,14 @@ def maior_digito(n):
             maior = int(i)
 
     return maior
-"""
 # Exercício 7
-"""
 def inverter_numero(n):
     n = str(n)
 
     invertido = int(n[::-1])
 
     return invertido
-"""
 # Exercício 8
-"""
 def fibonacci(n):
     if n == 1 or n == 2:
         return 1
@@ -90,5 +76,30 @@ def fibonacci(n):
         anterior = soma - anterior
         
     return soma
-"""
 # Exercício 9
+def  contagem_regressiva(n):
+    for i in range(n, -1, -1):
+        print(i)
+        
+    print('FIM!')
+# Exercício 10
+def jogo_adivinhacao():
+    num = random.randint(1, 100)
+    
+    tentativa = int(input('Insira um número de 1 a 100: '))
+    
+    while tentativa != num:
+        
+        if tentativa > 100 or tentativa < 1:
+            print('\nNúmero inválido')
+            
+        elif num < tentativa:
+            print(f'\nO número secreto é menor que {tentativa}')
+            
+        elif num > tentativa:
+            print(f'\nO número secreto é maior que {tentativa}')
+            
+        tentativa = int(input('\nInsira um número de 1 a 100: '))
+        
+    print(f'\nParabéns! O número secreto é {tentativa}!')
+     
